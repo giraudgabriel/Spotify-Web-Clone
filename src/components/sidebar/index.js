@@ -38,7 +38,7 @@ function SideBar(props) {
     function openNav() {
         let sidebar = document.querySelector('.sidebar')
         let menuBtn = document.querySelector('.menu-btn')
-        sidebar.style.width = "250px";
+        sidebar.style.width = "240px";
         menuBtn.style.display = 'none';
     }
     function closeNav() {
