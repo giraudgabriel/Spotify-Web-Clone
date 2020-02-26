@@ -1,19 +1,16 @@
 #slider-spotify {
-    background: linear-gradient(to right, #4CAF50 0%, #4CAF50 0%, gray 0%, gray 100%);
     border-radius: 8px;
-    height: 7px;
+    height: 2px;
     width: 100%;
     outline: none;
     transition: background 450ms ease-in;
     -webkit-appearance: none;
 }
-
-
 #slider-spotify::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: white;
     cursor: pointer;

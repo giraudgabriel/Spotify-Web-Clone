@@ -2,6 +2,7 @@ import * as React from 'react';
 import './index.css';
 import faker from 'faker';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Music from '../../models/Music'
 import {
     faPause,
     faPlay,
@@ -12,15 +13,22 @@ import {
     faHeart,
     faChevronUp,
     faList,
-    faDesktop,
-    faVolumeUp
+    faDesktop
 } from "@fortawesome/free-solid-svg-icons";
 import SliderRange from '../slider-range'
-function Player({titulo, autor}) {
+import VolumeControl from '../volume-control'
+function Player({time, autor, name}) {
     const [love,
         setLove] = React.useState(false);
     const [icon,
         setIcon] = React.useState(faPause)
+    const [music,
+        setMusic] = React.useState(new Music(time, autor, name))
+
+    function onValueChange(value) {
+        music.setTimeLeft(value)
+        setMusic(music)
+    }
 
     function getPauseText() {
         return (icon === faPause)
@@ -34,7 +42,6 @@ function Player({titulo, autor}) {
     }
     return (
         <div>
-
             <div className="player">
                 <div className="player-content">
                     <div className="music-foto">
@@ -50,7 +57,7 @@ function Player({titulo, autor}) {
                     </div>
                     <div className="music">
                         <p className="music-title">
-                            {titulo}
+                            {music.name}
                             <FontAwesomeIcon
                                 onClick={() => setLove(!love)}
                                 className={love
@@ -61,7 +68,7 @@ function Player({titulo, autor}) {
                                 : 'Adicionar as músicas curtidas'}
                                 icon={faHeart}/>
                             <br/>
-                            <span className="music-autor">{autor}</span>
+                            <span className="music-autor">{music.autor}</span>
                         </p>
                     </div>
                     <div className="controls">
@@ -83,18 +90,15 @@ function Player({titulo, autor}) {
                             </button>
                         </div>
                         <div className="timeline">
-                            <SliderRange/>
+                            <SliderRange onValueChange={onValueChange}/>
                         </div>
                     </div>
                     <div className="controls-right">
                         <div className="controls-buttons">
                             <FontAwesomeIcon className="btn-transparency" icon={faList}/>
                             <FontAwesomeIcon className="btn-transparency" icon={faDesktop}/>
-                            <FontAwesomeIcon className="btn-transparency" icon={faVolumeUp}/>
-                            <div className="volume">
-                                <SliderRange/>
-                            </div>
                         </div>
+                        <VolumeControl/>
                     </div>
                 </div>
             </div>

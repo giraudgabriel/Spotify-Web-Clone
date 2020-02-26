@@ -1,0 +1,115 @@
+.sidebar {
+    height: 85.5%;
+    width: 240px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    margin-right: 20px;
+  }
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .menu-btn{
+      display: none;
+      text-align: left;
+      left: 0;
+      color:white;
+      font-size: 20px;
+      
+  }
+  @media screen and (max-width: 650px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+.buttons {
+    padding-top: 5%;
+}
+
+.options {
+    font-size: 20px;
+}
+
+.btn-sidebar {
+    font-size: 14px;
+    width: 250px;
+    padding-bottom: 8px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.playlist {
+    padding-bottom: 10px;
+    cursor: default;
+}
+.libraries {
+    width: 250px;
+}
+.librarie {
+    padding-bottom: 8px;
+    width: 250px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: default;
+    opacity: 0.9;
+
+}
+.sidebar .subtitle {
+    font-size: 8px;
+    color: white;
+    opacity: 0.7;
+    padding-left: 25px;
+    padding-top: 15px;
+    letter-spacing: 2px;
+}
+
+.playlists {
+    padding-top: 0;
+}
+
+.new-playlist {
+    width: 250px;
+    text-align: left;
+    padding-right: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    position: fixed;
+    bottom: 20;
+    padding-top: 12px;
+    color: white;
+}
+
+.new-playlist hr {
+    border: 0.5px solid;
+    width: 100%;
+    text-align: left;
+}
+
+.icon-new-playlist {
+    padding-right: 5px;
+    font-size: 18px;
+}

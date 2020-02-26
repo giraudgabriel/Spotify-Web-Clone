@@ -2,7 +2,7 @@
     width: 100%;
     height: 80px;
     background-color: black;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .player .player-content {
@@ -11,11 +11,11 @@
 .player .player-content .music {
     position: fixed;
     text-align: center;
+    z-index: 0;
     width: auto;
     color: white;
 }
 .player .player-content .music-foto {
-    display: none;
     position: fixed;
     bottom: 5px;
     left: 15px;
@@ -39,10 +39,6 @@
 
 .player .player-content .music-foto .music-img {
     opacity: 1;
-    display: block;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
     width: 40%;
 }
 
@@ -82,7 +78,6 @@
 .player .player-content .controls {
     position: fixed;
     padding-left: 40%;
-    width: auto;
     text-align: center;
 }
 .player .player-content .controls .controls-buttons {
@@ -95,16 +90,20 @@
 }
 
 .player .player-content .controls-right{
-    width: auto;
+    position: absolute;
     text-align: center;
-    padding-left: 70%;
-    padding-top: 15px;
+    padding-left: 80%;
+    padding-top: 10px;
 }
 .volume {
-    width: 8%;
     position: absolute;
-    top:22px;
-    right: 14px;
+    top:5px;
+    right: -7%;
+}
+.volume-icon{
+    position: absolute;
+    top:10px;
+    right: -2%;
 }
 .btn-pause {
     border-radius: 50%;
